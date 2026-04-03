@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 36 39% 97%;
+    --foreground: 25 20% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 25 20% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 20% 25%;
+
+    --primary: 162 35% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 36 55% 88%;
+    --secondary-foreground: 25 20% 25%;
+
+    --muted: 36 30% 92%;
+    --muted-foreground: 25 15% 50%;
+
+    --accent: 162 45% 92%;
+    --accent-foreground: 162 35% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 36 25% 88%;
+    --input: 36 25% 88%;
+    --ring: 162 35% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom therapeutic design tokens */
+    --gradient-calm: linear-gradient(135deg, hsl(162 35% 45%) 0%, hsl(162 45% 60%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(36 39% 97%) 0%, hsl(162 45% 95%) 100%);
+    --shadow-gentle: 0 4px 24px -8px hsl(162 35% 45% / 0.15);
+    --shadow-card: 0 2px 16px -4px hsl(25 20% 25% / 0.08);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 25 20% 12%;
+    --foreground: 36 39% 95%;
+
+    --card: 25 15% 15%;
+    --card-foreground: 36 39% 95%;
+
+    --popover: 25 15% 15%;
+    --popover-foreground: 36 39% 95%;
+
+    --primary: 162 35% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 25 20% 20%;
+    --secondary-foreground: 36 39% 95%;
+
+    --muted: 25 15% 20%;
+    --muted-foreground: 36 20% 65%;
+
+    --accent: 162 35% 20%;
+    --accent-foreground: 162 45% 92%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 25 15% 22%;
+    --input: 25 15% 22%;
+    --ring: 162 35% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
